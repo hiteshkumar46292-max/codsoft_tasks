@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hitesh Kumar | BCA Student & Web Developer   </title>
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111827;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            min-height: 70px;
+            padding: 0 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           HERO / LANDING PAGE
+           TASK 2
+        ========================= */
+
+        .hero {
+            min-height: 90vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            padding: 50px 20px;
+
+            background: linear-gradient(
+                135deg,
+                #2563eb,
+                #7c3aed
+            );
+
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h4 {
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #facc15;
+        }
+
+        .hero h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            border-radius: 8px;
+
+            background: white;
+            color: #2563eb;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+
+        /* =========================
+           GENERAL SECTION
+        ========================= */
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 45px;
+            color: #111827;
+        }
+
+        .section-title span {
+            color: #2563eb;
+        }
+
+
+        /* =========================
+           ABOUT
+           TASK 1
+        ========================= */
+
+        #about {
+            background: white;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .profile-box {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink:0;
+            border:5px solid #2563ed;
+        }
+        .profile-box img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            display:block;
+        }
+
+        .about-text {
+            max-width: 600px;
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        .info {
+            margin-top: 20px;
+        }
+
+        .info p {
+            margin: 7px 0;
+        }
+
+
+        /* =========================
+           SKILLS
+           TASK 1
+        ========================= */
+
+        .skills-section {
+            background: #eef2ff;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background: white;
+
+            padding: 20px 30px;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-7px);
+        }
+
+
+        /* =========================
+           PROJECTS
+           TASK 1
+        ========================= */
+
+        #projects {
+            background: white;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #f8fafc;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            border: 1px solid #e5e7eb;
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            margin-bottom: 15px;
+        }
+
+        .project-tag {
+            display: inline-block;
+
+            padding: 5px 10px;
+
+            background: #dbeafe;
+            color: #1d4ed8;
+
+            border-radius: 5px;
+
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           RESUME
+           TASK 1
+        ========================= */
+
+        .resume-section {
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .resume-section .section-title {
+            color: white;
+        }
+
+        .resume-section p {
+            max-width: 650px;
+            margin: auto;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           CALCULATOR
+           TASK 3
+        ========================= */
+
+        .calculator-section {
+            background: #eef2ff;
+        }
+
+        .calculator {
+            width: 360px;
+            max-width: 100%;
+
+            margin: auto;
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+            background: #111827;
+
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+        }
+
+        #display {
+            width: 100%;
+            height: 75px;
+
+            border: none;
+            outline: none;
+
+            border-radius: 12px;
+
+            padding: 10px 15px;
+
+            margin-bottom: 20px;
+
+            font-size: 30px;
+
+            text-align: right;
+
+            background: white;
+            color: #111827;
+        }
+
+        .buttons {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 12px;
+        }
+
+        .buttons button {
+            height: 60px;
+
+            border: none;
+            border-radius: 12px;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            background: #374151;
+            color: white;
+
+            transition: 0.2s;
+        }
+
+        .buttons button:hover {
+            transform: scale(1.05);
+        }
+
+        .operator {
+            background: #f59e0b !important;
+        }
+
+        .clear {
+            background: #ef4444 !important;
+        }
+
+        .equal {
+            background: #22c55e !important;
+        }
+
+        .zero {
+            grid-column: span 2;
+        }
+
+
+        /* =========================
+           CONTACT
+           TASK 1
+        ========================= */
+
+        #contact {
+            background: white;
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact-item {
+            padding: 15px;
+            margin: 10px;
+
+            background: #f8fafc;
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #111827;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        footer span {
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+            }
+
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Hitesh Kumar<span>.</span>
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#calculator">Calculator</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================
+         TASK 2 - LANDING PAGE
+    ====================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h4>
+                WELCOME TO MY WEBSITE
+            </h4>
+
+            <h1>
+                Hi, I'm <span>Hitesh Kumar</span>
+            </h1>
+
+            <h2>
+                BCA Student & Web Development Learner
+            </h2>
+
+            <p>
+               I am a BCA student passionate about web development 
+               and software development.
+               I build clean, responsive, and user-friendly 
+               websites while continuously improving my programming skills.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         TASK 1 - ABOUT / PORTFOLIO
+    ====================================== -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                About <span>Me</span>
+            </h2>
+
+            <div class="about-container">
+
+                <div class="profile-box">
+                    <img src="profile.jpg.jpeg"
+                    HK
+                </div>
+
+                <div class="about-text">
+
+                    <h3>
+                        Hitesh Kumar
+                    </h3>
+
+                    <p>
+                        Hello! I am Hitesh Kumar, a BCA student
+                        at GRD Uttarakhand University, India
+                        I am Interested in web development and development.
+                    </p>
+
+                    <p>
+                        I am learning HTML, CSS, Javascript, Python, Java and c programming. 
+                        I enjoy creating practical projects and oimproving 
+                        my technical skills throught hand-on development.
+                    </p>
+
+                    <div class="info">
+
+                        <p>
+                            🎓 <strong>Course:</strong>
+                            Bachelor of Computer Applications (BCA)
+                        </p>
+
+                        <p>
+                            🏫 <strong>Institute:</strong>
+                            GRD Uttarakhand University, India
+                        </p>
+
+                        <p>
+                            💻 <strong>Interest:</strong>
+                            Web Development & Software Development
+                        </p>
+
+                        <p>
+                            📍 <strong>Location:</strong>
+                            Uttarakhand, India
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         TASK 1 - SKILLS
+    ====================================== -->
+
+    <section id="skills" class="skills-section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My <span>Skills</span>
+            </h2>
+
+            <div class="skills">
+
+                <div class="skill">
+                    HTML
+                </div>
+
+                <div class="skill">
+                    CSS
+                </div>
+
+                <div class="skill">
+                    JavaScript
+                </div>
+
+                <div class="skill">
+                    Python
+                </div>
+
+                <div class="skill">
+                    Java
+                </div>
+
+                <div class="skill">
+                    C Programming
+                </div>
+
+                <div class="skill">
+                    Git & GitHub
+                </div>
+
+                <div class="skill">
+                    Responsive Web Design
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         TASK 1 - PROJECTS
+    ====================================== -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My <span>Projects</span>
+            </h2>
+
+            <div class="projects">
+
+
+                <div class="project-card">
+
+                    <h3>
+                        Personal Portfolio
+                    </h3>
+
+                    <p>
+                        A responsive personal portfolio website built using 
+                        HTML, CSS Javascript to showcase 
+                        my skills, projects and profile.
+                    </p>
+
+                    <span class="project-tag">
+                        HTML + CSS
+                    </span>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>
+                        Student Management System
+                    </h3>
+
+                    <p>
+                        A Python-based student management system 
+                        with features to add, view, search, update and delete student records.
+                    </p>
+
+                    <span class="project-tag">
+                        Python
+                    </span>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>
+                        Calculator
+                    </h3>
+
+                    <p>
+                        A responsive calculator built using HTML,
+                        CSS and Javascript with basic arithmetic 
+                        operations and a clean user interface.
+                    </p>
+
+                    <span class="project-tag">
+                        HTML + CSS + JavaScript
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         TASK 1 - RESUME
+    ====================================== -->
+
+    <section class="resume-section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My <span>Resume</span>
+            </h2>
+
+            <p>
+                My resume contains my education, technical skills,
+                projects and career information.
+            </p>
+
+
+
+            
+            <a href="resume.pdf" target="_blank" class="btn">
+                View / Download My Resume
+                </a>
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         TASK 3 - CALCULATOR
+    ====================================== -->
+
+    <section id="calculator" class="calculator-section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                <span>Calculator</span>
+            </h2>
+
+            <div class="calculator">
+
+                <input
+                    type="text"
+                    id="display"
+                    placeholder="0"
+                    readonly
+                >
+
+                <div class="buttons">
+
+                    <button
+                        class="clear"
+                        onclick="clearDisplay()">
+                        AC
+                    </button>
+
+                    <button
+                        onclick="deleteLast()">
+                        DEL
+                    </button>
+
+                    <button
+                        onclick="appendValue('%')">
+                        %
+                    </button>
+
+                    <button
+                        class="operator"
+                        onclick="appendValue('/')">
+                        ÷
+                    </button>
+
+
+                    <button
+                        onclick="appendValue('7')">
+                        7
+                    </button>
+
+                    <button
+                        onclick="appendValue('8')">
+                        8
+                    </button>
+
+                    <button
+                        onclick="appendValue('9')">
+                        9
+                    </button>
+
+                    <button
+                        class="operator"
+                        onclick="appendValue('*')">
+                        ×
+                    </button>
+
+
+                    <button
+                        onclick="appendValue('4')">
+                        4
+                    </button>
+
+                    <button
+                        onclick="appendValue('5')">
+                        5
+                    </button>
+
+                    <button
+                        onclick="appendValue('6')">
+                        6
+                    </button>
+
+                    <button
+                        class="operator"
+                        onclick="appendValue('-')">
+                        −
+                    </button>
+
+
+                    <button
+                        onclick="appendValue('1')">
+                        1
+                    </button>
+
+                    <button
+                        onclick="appendValue('2')">
+                        2
+                    </button>
+
+                    <button
+                        onclick="appendValue('3')">
+                        3
+                    </button>
+
+                    <button
+                        class="operator"
+                        onclick="appendValue('+')">
+                        +
+                    </button>
+
+
+                    <button
+                        class="zero"
+                        onclick="appendValue('0')">
+                        0
+                    </button>
+
+                    <button
+                        onclick="appendValue('.')">
+                        .
+                    </button>
+
+                    <button
+                        class="equal"
+                        onclick="calculate()">
+                        =
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         TASK 1 - CONTACT
+    ====================================== -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Contact <span>Me</span>
+            </h2>
+
+            <div class="contact-box">
+
+                <div class="contact-item">
+                    📧 Email:
+                    <a href="mailto:hiteshkumar46292@gmail.com" target="_blank">
+                        <strong>hiteshkumar46292@gmail.com</strong>
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    📱 Phone:
+                    <strong>+91 7535936213</strong>
+                </div>
+
+                <div class="contact-item">
+                    📍 Location:
+                    <strong>Uttarakhand, India</strong>
+                </div>
+                <div class="github-item">
+                    <a href="https://github.com/hiteshkumar46292-max" target="_blank"
+                    class="github-btn">
+                    View My GitHub Profile
+                        🌐 GitHub
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 <span>Hitesh Kumar</span>
+        </p>
+
+        <p>
+            Personal Portfolio | Landing Page | Calculator
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script>
+
+        /* =========================
+           CALCULATOR
+        ========================= */
+
+        let display =
+            document.getElementById("display");
+
+
+        // Add number/operator
+        function appendValue(value) {
+
+            display.value += value;
+
+        }
+
+
+        // Clear calculator
+        function clearDisplay() {
+
+            display.value = "";
+
+        }
+
+
+        // Delete last character
+        function deleteLast() {
+
+            display.value =
+                display.value.slice(0, -1);
+
+        }
+
+
+        // Calculate result
+        function calculate() {
+
+            try {
+
+                if (display.value === "") {
+                    return;
+                }
+
+                display.value =
+                    eval(display.value);
+
+            }
+
+            catch (error) {
+
+                display.value = "Error";
+
+            }
+
+        }
+
+        
+    </script>
+
+</body>
+
+</html>
